@@ -10,6 +10,7 @@ SOURCE_DIR="/tmp/sai-logss"
 if [ ! -d $SOURCE_DIR ]
 then 
     echo -e "$R Source_DIR: $SOURCE_DIR does not exists $N"
+    exit 1
 fi 
 
 FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +30 -name "*.log")
