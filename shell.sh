@@ -13,4 +13,4 @@ then
     exit 1
 fi 
 
-find $SOURCE_DIR -type d -mtime +14 -exec rm -rf {} \;
+find $SOURCE_DIR -type d -exec rm -rf {} \;
