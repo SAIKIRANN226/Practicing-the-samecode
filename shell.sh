@@ -13,10 +13,4 @@ then
     exit 1
 fi 
 
-FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +30 -name "*.log")
-
-while IFS= read -r line 
-do
-    echo -e "$Y Deleting files $line"
-    rm -rf $line
-done <<< $FILES_TO_DELETE 
+FILES_TO_DELETE=$(find $SOURCE_DIR -type d -mtime +14 -exec rm -rf {} \;)
