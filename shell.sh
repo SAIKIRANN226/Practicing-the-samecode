@@ -12,4 +12,4 @@ then
     echo -e "$R Source_DIR: $SOURCE_DIR does not exists $N"
 fi 
 
-FILES_TO_DELETE=$(find $SOURCE_DIR -type -d rm -rf)
+FILES_TO_DELETE=$(find $SOURCE_DIR -type d rm -rf)
