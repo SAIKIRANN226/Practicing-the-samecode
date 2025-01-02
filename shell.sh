@@ -13,4 +13,4 @@ then
     exit 1
 fi 
 
-FILES_TO_DELETE=$(find $SOURCE_DIR -type d -mtime +14 -exec rm -rf {} \;)
+rmdir=$(find $SOURCE_DIR -type d -mtime +14 -exec rm -rf {} \;)
