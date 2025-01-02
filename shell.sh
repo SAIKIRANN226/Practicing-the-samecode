@@ -5,7 +5,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-SOURCE_DIR="/tmp/shell-logss"
+SOURCE_DIR="/tmp/sai-logss"
 
 if [ ! -d $SOURCE_DIR ]
 then 
