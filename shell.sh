@@ -12,7 +12,7 @@ then
     echo -e "$R SourceDIR: $SOURCE_DIR does not exists $N"
 fi 
 
-FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +30 -name "*.js")
+FILES_TO_DELETE=$(find $SOURCE_DIR -type d -mtime +30)
 
 while IFS= read -r line
 do
