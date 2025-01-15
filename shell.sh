@@ -9,9 +9,14 @@ SOURCE_DIR="/tmp/shell-logs"
 
 if [ ! -d $SOURCE_DIR ]
 then 
-    echo -e "$R Source_DIR: $SOURCE_DIR does not exists $N"
+    echo -e "$R Source_DIR: $SOURCE_DIR does not exist $N"
     exit 1
 fi 
 
-find $SOURCE_DIR -type d -name "*sample"
-rm -rf 
+FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log")
+
+while IFS= read -r line
+do 
+    echo -e "$Y Deleting lines $line $N"
+    rm -rf $line
+done
