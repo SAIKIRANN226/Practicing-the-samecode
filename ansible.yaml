@@ -1,5 +1,5 @@
 - name: nginx
-  hosts: web
+  hosts: 3.94.114.169
   become: yes
   tasks:
   - name: installing nginx
