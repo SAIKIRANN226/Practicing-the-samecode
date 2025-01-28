@@ -1,12 +1,12 @@
-- 03.multi-play.yaml: Go through the code is VS
-  Here giving - means it is a list of plays
-
-- For example create 2 servers: 
-  1. Ansible server make sure to install ansible in the server by "sudo yum install ansible -y" 
-     then it becomes ansible server
-
-  2. Node server ---> watch the 03.multi-play.yaml in VS
-  
-  3. Then gitbash,pull in server and execute by following command 
-      ansible-playbook -i inventory.ini -e ansible_user=centos -e ansible_password=DevOps321
-      <playbook-name>
+- name: testing ansible
+  hosts: web
+  become: yes
+  tasks:
+  - name: install nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
+  - name: run nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
