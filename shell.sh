@@ -5,9 +5,9 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-NUMBER=100
+NUMBER=$1
 
-if [ $NUMBER -ne 0 ]
+if [ $NUMBER -ne 100 ]
 then 
     echo -e "$R ERROR:: Given number is greater than 100 $N"
     exit 1
