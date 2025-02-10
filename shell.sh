@@ -1,16 +1,17 @@
 #!/bin/bash
 
-ID=(id -u)
-R="\e[31"
+ID=$(id -u)
+DATE=$(date)
+R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-DATE=$(date)
+
 
 if [ $ID -ne 0 ]
 then 
     echo -e "$R ERROR:: Please run the script with root user $N"
-    exit 120
+    exit 1
 else
     echo -e "$Y Script started executing at $DATE $N"
 fi
