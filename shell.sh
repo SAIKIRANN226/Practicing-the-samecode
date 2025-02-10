@@ -7,7 +7,7 @@ N="\e[0m"
 
 NUMBER=$1
 
-if [ $NUMBER -ne 100 ]
+if [ $NUMBER -gt 100 ]
 then 
     echo -e "$R ERROR:: Given number is greater than 100 $N"
     exit 1
