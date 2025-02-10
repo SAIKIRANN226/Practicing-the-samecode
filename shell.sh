@@ -25,3 +25,13 @@ then
 else
     echo -e "$Y Installing mysql SUCCESS $N"
 fi
+
+yum install git -y &>> /tmp/sai.txt
+
+if [ $? -ne 0 ]
+then 
+    echo -e "$R ERROR:: Installing git is failed $N"
+    exit 1
+else
+    echo -e "$Y Installing git is SUCCESS $N"
+fi
