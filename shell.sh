@@ -16,7 +16,7 @@ else
     echo -e "$Y Script started executing at $DATE $N"
 fi
 
-yum install mysql -y 
+yum install mysql -y &>> /tmp/sai.txt
 
 if [ $? -ne 0 ]
 then 
