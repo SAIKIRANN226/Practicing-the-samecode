@@ -31,7 +31,15 @@ yum install git -y &>> /tmp/sai.txt
 
 VALIDATE $? "Installing git"
 
+systemctl enable nginx
+
+VALIDATE $? "Enabling nginx"
+
+systemctl start nginx
+
+VALIDATE $? "Starting nginx"
+
 yum install mysql -y &>> /tmp/sai.txt
 
-VALIDATE $? "Installing git"
+VALIDATE $? "Installing mysql"
 
