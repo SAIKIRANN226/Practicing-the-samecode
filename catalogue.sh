@@ -50,10 +50,6 @@ mkdir -p /app
 
 VALIDATE $? "Creating app folder"
 
-mv /app 
-
-VALIDATE $? "Moving to the app folder"
-
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip
 
 VALIDATE $? "Downloading code to the app folder"
