@@ -91,7 +91,7 @@ dnf install mongodb-org-shell -y
 
 VALIDATE $? "Installing mongodb-org-shell"
 
-mongo --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js
+mongo --host 172.31.47.57 </app/schema/catalogue.js
 
 VALIDATE $? "Loading schema"
 
