@@ -8,8 +8,10 @@ N="\e[0m"
 
 DATE=$(date)
 
+LOGFILE="/tmp/$0/$DATE.log"
+
 VALIDATE() {
-    if [ $1 -ne 0 ]
+    if [ $? -ne 0 ]
     then 
         echo -e "$2....$R FAILED $N"
         exit 1
@@ -27,19 +29,13 @@ else
 fi 
 
 
-yum install git -y &>> /tmp/sai.txt
-
-VALIDATE $? "Installing git"
-
-systemctl enable nginx
-
-VALIDATE $? "Enabling nginx"
-
-systemctl start nginx
-
-VALIDATE $? "Starting nginx"
-
-yum install mysql -y &>> /tmp/sai.txt
-
-VALIDATE $? "Installing mysql"
-
+for package in $@
+do 
+    yum list installed $package 
+    if [ $? -ne 0 ]
+    then 
+        yum install $package &>> LOGFILE
+    else
+        echo -e "$package is already installed so ....$Y SKIPPING $N"
+    fi
+done
