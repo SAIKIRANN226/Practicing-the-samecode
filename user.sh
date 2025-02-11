@@ -91,7 +91,7 @@ dnf install mongodb-org-shell -y
 
 VALIDATE $? "Installing mongo-org-sell"
 
-mongo --host 172.31.47.57 </app/schema/user.js
+mongo --host 54.166.195.98 </app/schema/user.js
 
 VALIDATE $? "Loading schema"
 
