@@ -27,7 +27,7 @@ else
     echo -e "$Y Script started executing at $DATE $N"
 fi 
 
-yum install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y &>> $LOGFILE
+dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y &>> $LOGFILE
 
 VALIDATE $? "Installing repo file"
 
