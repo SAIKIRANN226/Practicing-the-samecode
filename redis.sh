@@ -27,9 +27,9 @@ else
     echo -e "$Y Script started executing at $DATE $N"
 fi 
 
-dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y &>> $LOGFILE
+# dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y &>> $LOGFILE
 
-VALIDATE $? "Installing repo file"
+# VALIDATE $? "Installing repo file"
 
 dnf module enable redis:remi-6.2 -y &>> $LOGFILE
 
