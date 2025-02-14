@@ -7,7 +7,7 @@ Y="\e[33m"
 N="\e[0m"
 DATE=$(date)
 
-LOGFILE="/tmp/$0/sai.log"
+LOGFILE="/tmp/$0-$DATE.log"
 
 VALIDATE() {
     if [ $1 -ne 0 ]
