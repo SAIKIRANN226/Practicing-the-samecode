@@ -53,7 +53,7 @@ mkdir -p /app
 
 VALIDATE $? "Creating app folder"
 
-mv /app
+cd /app
 
 VALIDATE $? "Moving to app folder"
 
