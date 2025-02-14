@@ -55,7 +55,7 @@ unzip /tmp/web.zip &>> $LOGFILE
 
 VALIDATE $? "Unzipping the code"
 
-cp roboshop.conf /etc/nginx/default.d/roboshop.conf $>> $LOGFILE
+cp /home/centos/Practice/roboshop.conf /etc/nginx/default.d/roboshop.conf &>> $LOGFILE
 
 VALIDATE $? "Copied roboshop.conf"
 
