@@ -48,7 +48,3 @@ VALIDATE $? "Starting mysqld"
 mysql_secure_installation --set-root-pass RoboShop@1 &>> $LOGFILE
 
 VALIDATE $? "Changing roboshop password"
-
-systemctl restart mysql
-
-VALIDATE $? "Restarting mysql"
