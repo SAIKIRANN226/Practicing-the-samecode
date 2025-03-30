@@ -1,0 +1,5 @@
+- name: ping the play
+  hosts: web
+  tasks:
+  - name: pinging the play
+    ansible.builtin.ping:
