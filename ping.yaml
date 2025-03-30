@@ -1,5 +1,10 @@
-- name: ping the playbook
+- name: variables concept
   hosts: localhost
-  tasks:
-  - name: pinging the playbook
-    ansible.builtin.ping:
+  vars: 
+    Course: "DevOps"
+    Trainer: "Shiva"
+    Duration: "114 hours"
+  tasks: 
+  - name: printing the variables value
+    ansible.builtin.debug:
+      msg: "I am Learning {{Course}} with {{Trainer}}"
