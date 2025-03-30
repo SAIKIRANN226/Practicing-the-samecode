@@ -1,12 +1,12 @@
 - name: ping the play
-  hosts: web
+  hosts: localhost
   tasks:
   - name: pinging the play
     ansible.builtin.ping:
 
 
 - name: installing nginx
-  hosts: web
+  hosts: localhost
   tasks:
   - name: install nginx
     ansible.builtin.package:
