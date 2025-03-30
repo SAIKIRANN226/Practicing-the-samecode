@@ -1,14 +1,5 @@
-- name: ping the play
+- name: ping the playbook
   hosts: localhost
   tasks:
-  - name: pinging the play
+  - name: pinging the playbook
     ansible.builtin.ping:
-
-
-- name: installing nginx
-  hosts: localhost
-  tasks:
-  - name: install nginx
-    ansible.builtin.package:
-      name: nginx
-      state: present
