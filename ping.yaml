@@ -1,10 +1,14 @@
 - name: variables concept
   hosts: localhost
-  vars: 
+  vars:
     Course: "DevOps"
     Trainer: "Shiva"
-    Duration: "114 hours"
-  tasks: 
-  - name: printing the variables value
-    ansible.builtin.debug:
-      msg: "I am Learning {{Course}} with {{Trainer}}"
+  tasks:
+  - name: testing task level variables
+    vars:
+      Course: "Python"
+      Trainer: "Sai"
+    tasks:
+    - name: Testing variables
+      ansible.builtin.debug:
+        msg: "Iam Learning {{Course}} with {{Trainer}}"
