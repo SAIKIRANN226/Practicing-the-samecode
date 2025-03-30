@@ -1,5 +1,14 @@
 - name: ping the play
-  hosts: web
+  hosts: 34.201.120.240
   tasks:
   - name: pinging the play
     ansible.builtin.ping:
+
+
+- name: installing nginx
+  hosts: 34.201.120.240
+  tasks:
+  - name: install nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
