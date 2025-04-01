@@ -1,14 +1,6 @@
-- name: variables concept
+- name: ping the server
   hosts: localhost
-  vars:
-    Course: "DevOps"
-    Trainer: "Shiva"
+  become: yes
   tasks:
-  - name: testing task level variables
-    vars:
-      Course: "Python"
-      Trainer: "Sai"
-    tasks:
-    - name: Testing variables
-      ansible.builtin.debug:
-        msg: "Iam Learning {{Course}} with {{Trainer}}"
+  - name: pinging the server
+    ansible.builtin.ping:
